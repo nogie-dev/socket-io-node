@@ -1,0 +1,24 @@
+version: "3"
+
+tasks:
+  # build:
+  #   desc: Build the app
+  #   cmds: 
+  #   - GOFLAGS=-mod=mod go build -o bin/go-crud cmd/main.go
+  #   - chmod +x bin/go-crud
+  # run: 
+  #   desc: Run builed app
+  #   cmds: 
+  #   - bin/go-crud
+  dev:
+    desc: Run dev app
+    cmds:
+    - nodemon app.js
+  up:
+    desc: Run mysql
+    cmds:
+    - docker-compose up -d
+  down:
+    desc: Down mysql
+    cmds:
+    - docker-compose down
